@@ -1,0 +1,35 @@
+.carousel-item{
+    height: 95vh;
+    width: 100vw;
+}
+.d-flex img {
+    height: 200px;
+    width: 285px;
+}
+
+header img {
+    height: 29px;
+}
+
+p, h5{
+    color: black;
+}
+
+section .tarjetas {
+    margin-top: 20px;
+}
+
+#carito-detalle {
+    display: none;
+    background-color: white;
+    height: 80vh;
+    width: 80vw;
+    position: fixed;
+    z-index: 1;
+    top: 100px;
+    left: 150px;
+    border: solid rgba(50,50,50,0.5);
+    border-radius: 10px;
+    margin: auto;
+    padding: 20px;
+}

@@ -1,0 +1,47 @@
+body {
+    background-color: blanchedalmond;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1{
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#calculadora {
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 500px;
+    height: 500px;
+    background-color: rgba(0, 0, 255, 0.562);
+    color: white;
+}
+
+#valor1 {
+    margin-top: 20px;
+}
+#valor1, #valor2 {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+button:hover{
+    
+    translate: 0 -10px;
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
+}
+button {
+    padding: 10px;
+    background-color: gray;
+    color: white;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: 200ms;
+}
