@@ -1,0 +1,35 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: antiquewhite;
+}
+
+.boton {
+    border-radius: 20px;
+    padding: 10px;
+    background-color: darkslateblue;
+    color: white;
+}
+
+.boton:hover {
+    translate: 0 -5px;
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+#contenido {
+    text-align: center;
+    border-radius: 20px;
+}
+
+#datos {
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#contenido {
+    background-color: rgba(137, 43, 226, 0.329);
+}
+
+footer{
+    text-align: center;
+}
