@@ -20,6 +20,14 @@ function addToCart() {
   updateCartModal();
 }
 
+function removeFromCart(index) {
+  // Eliminar el producto del carrito
+  cartItems.splice(index, 1);
+
+  // Actualizar el contenido del carrito en la ventana modal
+  updateCartModal();
+}
+
 function updateCartModal() {
   const cartItemsList = document.getElementById('cartContent');
   cartItemsList.innerHTML = '';
@@ -41,13 +49,16 @@ function updateCartModal() {
     productTh.textContent = 'Producto';
     const priceTh = document.createElement('th');
     priceTh.textContent = 'Precio';
+    const actionTh = document.createElement('th');
+    actionTh.textContent = 'Acción';
     theadRow.appendChild(productTh);
     theadRow.appendChild(priceTh);
+    theadRow.appendChild(actionTh);
     thead.appendChild(theadRow);
 
     const tbody = document.createElement('tbody');
 
-    cartItems.forEach(item => {
+    cartItems.forEach((item, index) => {
       const bodyRow = document.createElement('tr');
 
       const productCell = document.createElement('td');
@@ -63,8 +74,16 @@ function updateCartModal() {
       const priceTd = document.createElement('td');
       priceTd.textContent = item.price;
 
+      const actionTd = document.createElement('td');
+      const removeButton = document.createElement('button');
+      removeButton.classList.add('btn', 'btn-danger', 'btn-sm');
+      removeButton.textContent = 'Eliminar';
+      removeButton.addEventListener('click', () => removeFromCart(index));
+      actionTd.appendChild(removeButton);
+
       bodyRow.appendChild(productCell);
       bodyRow.appendChild(priceTd);
+      bodyRow.appendChild(actionTd);
       tbody.appendChild(bodyRow);
 
       // Sumar el precio del producto al total
